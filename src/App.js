@@ -1,4 +1,4 @@
-import BookingTicket from "./BatTapBookingTicket/BookingTicket";
+import BookingTicket from "./components/BookingTicket";
 
 function App() {
   return <div className="App">
