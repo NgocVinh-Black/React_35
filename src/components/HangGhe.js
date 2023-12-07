@@ -7,13 +7,11 @@ import { datGheAction } from "../redux/DatVeAction";
     return this.props.hangGhe.danhSachGhe.map((ghe, index) => {
       let cssGheDaDat = "";
       let disabled = false;
-      // Trạng thái ghế đã bị người khác đặt rồi
       if (ghe.daDat) {
         cssGheDaDat = "gheDuocChon";
         disabled = true;
       }
 
-      // xét trạng thái đang đặt
       let cssGheDangDat = "";
       let indexGheDangDat = this.props.danhSachGheDangDat.findIndex(
         (gheDangDat) => gheDangDat.soGhe === ghe.soGhe

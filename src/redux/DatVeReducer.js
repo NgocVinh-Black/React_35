@@ -12,13 +12,10 @@ const DatVeReducer = (state = stateDefault, action) => {
         (gheDangDat) => gheDangDat.soGhe === action.ghe.soGhe
       );
       if (index !== -1) {
-        //khi người dùng click ghế đang đặt đã có trong mảng thì sẽ remove đi
         danhSachGheDangDatUpdate.splice(index, 1);
       } else {
-        //khi người dùng click ghế đang đặt chưa có trong mảng thì push vào mảng
         danhSachGheDangDatUpdate.push(action.ghe);
       }
-      //cập nhật lại state => giao diện render lại
 
       return { ...state, danhSachGheDangDat: danhSachGheDangDatUpdate };
     }
